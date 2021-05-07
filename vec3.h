@@ -126,8 +126,9 @@ inline vec3 cross(const vec3 & u, const vec3 & v)
                 u.e[0] * v.e[1] - u.e[1] * v.e[0]);
 }
 
-// これも引数はconst vec3 & vでも良いのでは？
-inline vec3 unit_vector(vec3 v)
+// これも引数はconst vec3 & vでも良いのでは？コンパイルも実行でも問題無し
+inline vec3 unit_vector(const vec3 & v)
+// inline vec3 unit_vector(vec3 v)
 {
     return v / v.length();
 }
