@@ -38,7 +38,7 @@ color ray_color(const ray & r, const hittable & world, int depth)
         return color(0, 0, 0);
     }
 
-    if (world.hit(r, 0.001, infinity, rec))
+    if (world.hit(r, 0, infinity, rec))
     {
         point3 target = rec.p + rec.normal + random_in_unit_sphere();
         // 再帰呼び出しになっている。深さを条件として付け加えることで無限ループを回避している

@@ -10,7 +10,7 @@ PROGRAM = main
 
 all : $(PROGRAM)
 
-main : main.cpp vec3.h color.h ray.h
+main : main.cpp
 	$(CC) $(GCC_OPTIONS) $^ -o $@
 
 rum : ./main
