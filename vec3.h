@@ -69,6 +69,10 @@ using color = vec3;     // RGB color
 
 
 // vec3 Utility Functions
+// 四則演算とかはinlineにして関数呼び出しをするのではなく、コンパイル時
+// に呼び出し元で展開してしまったほうが実行速度が向上することが期待出来る
+// 上にサイズも小さいので木にする必要もない、ということでこのようにしている
+// のだと思われる。
 
 inline std::ostream & operator << (std::ostream & out, const vec3 & v)
 {
