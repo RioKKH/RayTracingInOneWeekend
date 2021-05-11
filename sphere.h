@@ -8,7 +8,8 @@ class sphere : public hittable
 {
     public:
         sphere() {};
-        sphere(point3 cen, double r) : center(cen), radius(r) {};
+        sphere(point3 cen, double r, shared_ptr<material> m)
+            : center(cen), radius(r), mat_ptr(m) {};
 
         // 派生クラスのでvirtual指定は本来は不要なはず
         // 特に下ではoverride指定子を使っているので、なぜvirutalを使っているのかが不明。
